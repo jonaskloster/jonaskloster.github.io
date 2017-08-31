@@ -2,21 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hjem</title>
     <style>
         body {
             background-color: #d80018;
+            text-align: center;
         }
          h1{
              color: #d31010;
              font-size: 32px;
              font-style: italic;
          }
+        nav a{
+            text-decoration: none;
+            color: white;
+            font-style: inherit;
+        }
+
+        .beer {
+            transition: 2s;
+        }
+
+        .beer:hover {
+            transform: rotate(1turn);
+        }
+
+        @keyframes drive {
+            0% {
+                transform: translateX(-1500px);
+            }
+            100% {
+                transform: translateX(1200px);
+            }
+        }
+
+        #buss {
+            margin-top: 80px;
+            animation: drive 4s infinite alternate;
+        }
+
+
     </style>
 </head>
 <body>
-    <h1>ZYWIEC</h1>
+    <img class="beer" src="../UKE35/images/zywiec_image.png" width="200">
     <img src="images/logo.png" alt="">
+    <img class="beer" src="../UKE35/images/zywiec_image.png" width="200">
+
+    <nav>
+
+                <a href="zywiec.html">Hjem</a>
+
+                <a href="bilderzw.html">Bilder</a>
+
+                <a href="nyheterzw.html">Nyheter</a>
+
+
+                <a href="om.html">Om</a>
+
+
+    </nav>
+
+    <img id="buss" src="../UKE35/images/buss_image.png">
 
 </body>
 </html>
