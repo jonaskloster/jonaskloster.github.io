@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pusekatten</title>
+    <style>
+
+        @keyframes catwalk {
+            to{
+                background-position: 0 -2280px;
+            }
+
+        }
+
+        @keyframes moveRight {
+            to {
+                transform: translateX(800px);
+            }
+
+        }
+
+        .katt {
+            background-image: url("sprite_catwalk.png");
+            width: 400px;
+            height: 190px;
+
+            animation-name: catwalk, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 3s;
+            animation-iteration-count: infinite;
+
+
+        }
+        #k1 { animation-delay:  0s;}
+        #k2 { animation-delay:  0.5s;}
+        #k3 { animation-delay:  1s;}
+
+    </style>
+</head>
+<body>
+
+
+    <div id="k1" class="katt"></div>
+    <div id="k2" class="katt"></div>
+    <div id="k3" class="katt"></div>
+
+
+</body>
+</html>
