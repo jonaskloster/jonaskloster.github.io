@@ -1,14 +1,23 @@
-
+body{
+    margin: 0cm;
+}
 
 
 ul{
 
-    font-family: Helvetica, Georgia;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
     max-width: 970px;
     margin: auto;
     width: 100%;
     border: 10px solid #364b71;
-    padding: 25px;
+    padding: 5%;
+    border-bottom: 4cm;
+    border-top: 4cm;
+    font-size: larger;
+
+
+
+
 
 
 }
@@ -42,7 +51,7 @@ nav{
 
 
     text-align: center;
-    font-family: Helvetica;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
     background-color: #96aeda;
 
 
@@ -58,7 +67,7 @@ nav{
     font-size: 16px;
     border: none;
     cursor: pointer;
-    font-family: Helvetica;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
 
 
 }
@@ -77,7 +86,7 @@ nav{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    font-family: Helvetica;
+    font-family:Tw Cen MT, Helvetica, Verdana, SansSerif;
 }
 
 /* Linkene inni dropdownen*/
@@ -99,4 +108,14 @@ nav{
 /* bytter bakgrunnsfargen på drowdown knappen når innholdet hvises*/
 .dropdown:hover .dropbtn {
     background-color: #d1e1ff;
+}
+
+footer {
+    padding:20px;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:#96aeda;
+    text-align: center;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
+    margin-top: -4px;
 }
