@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Design</title>
+    <style>
+
+        body{
+            margin: 0;
+            display: grid;
+            min-height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            font-family: sans-serif;
+        }
+        body > header {
+            /* filter: drop-shadow(0px 10px 5px black);*/
+        }
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        body > header > nav > a {
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            color: gray;
+            background-color: lightseagreen;
+        }
+        body > header > nav > a.valgt {
+            background-color: darkgray;
+            color: white;
+
+        }
+        body > header > nav> a:hover {
+            background-color: darkgray;
+            color: white;
+        }
+        body > footer{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            display:grid;
+            grid-gap: 20px
+            grid-auto-flow: column;
+            text-align: center;
+        }
+        body > footer > article > img {
+            width: 90px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+       <nav>
+           <a class=valgt href="#">HOME</a>
+           <a href="#">AWAY</a>
+           <a href="#">CONTACTS</a>
+           <a href="#">ABOUT US</a>
+           <a href="#">STORE</a>
+           <a href="#">IMAGES</a>
+       </nav>
+
+    </header>
+
+    <main>
+
+        MAIN
+
+    </main>
+
+
+    <footer>
+
+        <article>
+            <img src="Images/KikkertIcon.png" alt="">
+            <p>Noe tull</p>
+        </article>
+
+        <article>
+            <img src="Images/Graficon.png" alt="">
+            <p>Noe tull</p>
+        </article>
+
+        <article>
+            <img src="Images/Pengeicon.png" alt="">
+            <p>Noe tull</p>
+        </article>
+
+
+    </footer>
+
+</body>
+</html>
