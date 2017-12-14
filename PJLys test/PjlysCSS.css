@@ -1,0 +1,245 @@
+body{
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Letter Gothic Std";
+}
+body > header {
+    /* filter: drop-shadow(0px 10px 5px black);*/
+    background-color: #2b2b2b;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+body > header > nav {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Crixus Laser", serif;
+
+}
+body > header > nav > a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px;
+    color: white;
+    background-color: #2b2b2b;
+
+}
+body > header > nav > a.valgt {
+
+    color: darkgray;
+
+}
+body > header > nav> a:hover {
+
+    color: darkgray;
+}
+body > footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display:grid;
+    grid-gap: 20px;
+    grid-auto-flow: column;
+    text-align: center;
+}
+body > footer > article > img {
+    width: 90px;
+
+}
+body > main {
+    background-image: url("Images/City.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    background-attachment: fixed;
+
+}
+body > main > h1 {
+    font-family: Freshman;
+    text-align: center;
+    font-size: 150px;
+    color: white;
+
+}
+
+
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slidy infinite;
+}
+
+
+
+
+
+
+#topmenu {
+    text-align: center;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
+    background-color: #2b2b2b;
+
+}
+
+@media (max-width: 760px) {
+
+    #topmenu {
+        display: none;
+    }
+
+}
+
+
+
+
+/* Dropdown knappen design*/
+.dropbtn {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
+    width:  100px;
+
+}
+
+/* beholderern (div) brukt til p posisjonerer dropdown boksen*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Innholdet  */
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    background-color: white;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family:Tw Cen MT, Helvetica, Verdana, SansSerif;
+}
+
+/* Linkene inni dropdownen*/
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* bytte farge på dropdown hover når man hovrer over den*/
+.dropdown-content a:hover {background-color: #96aeda}
+
+/* hvis dropdown menu når man hovrer*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* bytter bakgrunnsfargen på drowdown knappen når innholdet hvises*/
+.dropdown:hover .dropbtn {
+    background-color: #d1e1ff;
+}
+
+
+#burgermenu {
+
+    position: absolute;
+
+
+
+}
+
+#burger {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+#burger > div {
+    height: 2px;
+    background-color: white;
+}
+#menu {
+    background-color: #333333;
+    position: absolute;
+    width: 300px;
+    min-height: calc(100vh - 64px);
+    left: -300px;
+    top: 64px;
+    transition: 1s;
+}
+
+#cb {
+    display: none;
+}
+
+
+#cb:checked ~ #menu {
+    left: 0px;
+
+}
+
+#cb:checked ~ #menu {
+    left: 0;
+}
+
+#burger > div {
+    transition: 0.5s;
+}
+
+#cb:checked ~ #burger > div:first-child {
+    transform: translateY(15px) rotate(45deg);
+
+
+}
+
+#cb:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+
+
+
+}
+
+#cb:checked ~ #burger > div:last-child {
+    transform: translateY(-15px) rotate(-45deg);
+
+}
+#menu ul li {
+    list-style-type: none;
+}
+#menu {
+    text-align: left;
+}
