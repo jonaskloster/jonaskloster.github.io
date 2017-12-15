@@ -3,7 +3,8 @@ body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    font-family: "Letter Gothic Std";
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif
+
 }
 body > header {
     /* filter: drop-shadow(0px 10px 5px black);*/
@@ -19,7 +20,7 @@ body > header > nav {
     grid-auto-flow: column;
     align-items: center;
     justify-content: center;
-    font-family: "Crixus Laser", serif;
+
 
 }
 body > header > nav > a {
@@ -61,7 +62,7 @@ body > main {
 
 }
 body > main > h1 {
-    font-family: Freshman;
+    font-family: serif;
     text-align: center;
     font-size: 150px;
     color: white;
@@ -106,16 +107,6 @@ div#slider figure {
     background-color: #2b2b2b;
 
 }
-
-@media (max-width: 760px) {
-
-    #topmenu {
-        display: none;
-    }
-
-}
-
-
 
 
 /* Dropdown knappen design*/
@@ -177,16 +168,19 @@ div#slider figure {
 
 
 
+
 }
 
 #burger {
-    display: flex;
+    display: none;
     width: 32px;
     height: 32px;
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
     position: relative;
+    top: 30px;
+    left: 10px;
 }
 #burger > div {
     height: 2px;
@@ -196,9 +190,9 @@ div#slider figure {
     background-color: #333333;
     position: absolute;
     width: 300px;
-    min-height: calc(100vh - 64px);
+    min-height: calc(100vh - 155px);
     left: -300px;
-    top: 64px;
+    top: 155px;
     transition: 1s;
 }
 
@@ -218,6 +212,7 @@ div#slider figure {
 
 #burger > div {
     transition: 0.5s;
+
 }
 
 #cb:checked ~ #burger > div:first-child {
@@ -236,10 +231,59 @@ div#slider figure {
 #cb:checked ~ #burger > div:last-child {
     transform: translateY(-15px) rotate(-45deg);
 
-}
-#menu ul li {
-    list-style-type: none;
+
 }
 #menu {
     text-align: left;
+}
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-family: Tw Cen MT, Helvetica, Verdana, SansSerif;
+    font-size: larger;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: darkred;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: #333333;
+    display: none;
+    color: white;
+    font-family: ;
+}
+
+
+
+
+@media (max-width: 760px){
+
+    #burger {
+        display: flex;
+    }
+
+    #menu {
+        min-height: calc(100vh - 105px);
+        top: 105px;
+    }
+
+    #topmenu {
+        display: none;
+    }
+
 }
