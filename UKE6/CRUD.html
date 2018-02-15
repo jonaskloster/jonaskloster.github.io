@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+
+
+<main id="main"></main>
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB3paA-Sfk13Dmd-0DauLKT4QHPo5SxIcc",
+        authDomain: "datahovedkvarter.firebaseapp.com",
+        databaseURL: "https://datahovedkvarter.firebaseio.com",
+        projectId: "datahovedkvarter",
+        storageBucket: "datahovedkvarter.appspot.com",
+        messagingSenderId: "1003720054804"
+    };
+    firebase.initializeApp(config);
+</script>
+<script>
+
+    const main = document.getElementById("main");
+
+    const db = firebase.database();
+    //const bilregister = db.ref("bilregister");
+    const biler = db.ref("bilregister/biler");
+    const personer = db.ref("bilregister/personer");
+
+    //CREATE
+    const petter = personer.child("17028043564");
+    petter.set({
+        fornavn: "Petter",
+        etternavn: "Solberg"
+
+    });
+    //En annen person
+    const martin = personer.child("03050079197");
+    martin.set({
+        fornavn: "martin",
+        etternavn: "Schancke"
+    });
+
+    //forsøker å endre etternavnet til Martin
+    martin.update({
+        etternavn: "Schanche"
+
+    })
+
+    //Remove
+    petter.remove();
+
+    //READ
+
+    function visPerson(snap) {
+        const person = snap.val();
+        main.innerHTML += <p>Ny person: ${person.fornavn}</p>;
+    }
+    personer.on("child_added", visPerson);
+
+</script>
+
+</body>
+</html>
