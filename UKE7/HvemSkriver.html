@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hvem Skriver</title>
+
+    <style>
+
+
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <input type="text" placeholder="Hva mener du" id="inpMelding">
+    <div id="animasjon" class="ikkeRist"></div>
+
+
+
+
+<script>
+
+        const inpMelding = document.getElementById("inpMelding");
+        const animasjon = document.getElementById("animasjon");
+
+        function startRising() {
+            animasjon.className = "Rist";
+            setTimout(stoppRisting, 5000);
+
+        }
+
+        function stoppRisting() {
+            animasjon.className = "ikkeRist"
+
+        }
+
+        inpMelding.oninput = startRising()
+
+</script>
+
+</body>
+</html>
