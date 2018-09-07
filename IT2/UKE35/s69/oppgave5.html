@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>oppgave5</title>
+    <style>
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+<img id="bilde" src="" alt="">
+
+
+
+<script>
+
+
+
+
+
+    var imgBilde = document.getElementById("bilde");
+
+
+
+    var bildeArray = ["bilder\\DJI_0012.JPG", "bilder\\DJI_0029.JPG", "  bilder\\Skjermbilde (27).png"];
+
+   // var tilfeldigTall = Math.random()*2 //Oppretter en array med filnavnene til bildene mine.
+
+    //var tilfeldigAvrundet = Math.round(tilfeldigTall); //opretter en variabel som runder opp tilfeldig tall til nærmeste heltall.
+
+    //imgBilde.src = bildeArray[tilfeldigAvrundet] //Setter imgBilde sin source til å være bildeArray[tilfeldigTall]
+
+    imgBilde.src = bildeArray[Math.round(Math.random()*2)];
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

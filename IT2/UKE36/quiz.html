@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+    <p>Hva er hovedstaden i Mongolia?</p>
+    <input type="text" id="inpSvar" placeholder="Skriv inn ditt svar her">
+    <button id="btnSvar">Send inn</button>
+    <div id="divSvar"></div>
+
+    <script>
+
+
+        var inpSvar = document.getElementById("inpSvar"); //Variabel som referere til inpSvar
+        var btnSvar = document.getElementById("btnSvar"); //Ref. til knappen
+        var divSvar = document.getElementById("divSvar");//ref. til divSvar
+
+        btnSvar.onclick = function () { //funksjon som kjører hvis knappen trykkes på
+            if (inpSvar.value === "Ulan Bator" || inpSvar.value === "Ulanbataar") { //hvis brukeren skriver Ulan Bator eller Ulanbataar kjører koden.
+                divSvar.innerHTML = "Gratulerer! Du svarte riktig!"; //Skriver en beskjed til divSvar innerHtml
+            } else { //kode som kjører hvis brukeren ikke skriver riktig svar(Ulan Bator/Ulanbataar
+                divSvar.innerHtml = "Det var feil! Prøv igjen!";
+            }
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

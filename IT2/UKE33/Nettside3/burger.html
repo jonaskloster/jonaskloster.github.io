@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Burger</title>
+    <style>
+
+        body {
+            background-color: white;
+        }
+        #burger {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            justify-content: space-between;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        #burger > div {
+            height: 4px;
+            background-color: gray;
+
+        }
+        #menu {
+            background-color: gray;
+            position: absolute;
+            width: 300px;
+            min-height: calc(100vh - 64px);
+            left: -300px;
+            top: 64px;
+            transition: 1s;
+        }
+
+        #cb {
+            display: none;
+        }
+
+
+        #cb:checked ~ #menu {
+            left: 0px;
+
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+
+        #burger > div {
+            transition: 0.5s;
+        }
+
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(15px) rotate(45deg);
+
+
+        }
+
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+
+
+
+        }
+
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-15px) rotate(-45deg);
+
+        }
+
+        li{
+
+            list-style-type: none;
+            padding: 5px;
+            font-family: "Coo Hew";
+            color: white;
+
+
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+        <img class="center" width="1000" src="./Bilder/Portofolio.png" alt="">
+
+    </header>
+
+
+
+
+    <input type="checkbox" id="cb">
+    <label for="cb" id="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+    </label>
+
+    <nav id="menu">
+
+        <ul>
+
+            <li>Hjem</li>
+            <li>Illustrasjoner</li>
+            <li>Animasjoner</li>
+            <li>Om meg</li>
+
+
+        </ul>
+
+     </nav>
+
+</body>
+</html>
+
+

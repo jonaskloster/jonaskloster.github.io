@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fikant</title>
+    <style>
+
+
+        #minFirkant{
+            background-color: peachpuff;
+            width: 200px;
+            height: 200px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<input type="range" id="inpkant">
+<input type="range" id="inpStorrelse" min="1" max="1024">
+
+<div id="minFirkant"></div>
+
+
+<script>
+        
+    var inpStorrelse = document.getElementById("inpStorrelse");
+    var minFirkant = document.getElementById("minFirkant");
+    var inpkant = document.getElementById("inpkant");
+    
+    inpStorrelse.onmousemove = function () {
+        minFirkant.style.width = inpStorrelse.value + "px";
+    }
+    
+    inpkant.onmousemove = function () {
+        minFirkant.style.borderRadius = inpkant.value + "px";
+        
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
